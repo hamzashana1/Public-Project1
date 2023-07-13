@@ -179,6 +179,77 @@ input {
     }
 }
 
+@media (max-width: 500px) {
+
+    .connetFourImage,
+    .connetFourImage1 {
+        width: 150px;
+        margin-left: 2px;
+    }
+
+    .instructions{
+    width: 150px;
+    }
+    .instructions h1 {
+        font-size: 10px;
+        font-weight: bold;
+        font-family: 'Chela One', Arial, Helvetica, sans-serif;
+        margin-left: 2px;
+    }
+
+    .instructions p {
+        font-size: 5px;
+        margin-left: 2px;
+    }
+    .inputStyles {
+        display: grid;
+        grid-template-columns: 40px 20px 40px 20px;
+        margin-left: 2px;
+    }
+    #player1, #player2 {
+        width: 20px;
+        border-radius: 2px;
+        font-size: 5px;
+    }
+    .pinkChip {
+        background-color: #FF23F6;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        border: solid;
+        border-color: #FFFFFF;
+    }
+    
+    .goldenChip {
+        background-color: #FFC123;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        border: solid;
+        border-color: #FFFFFF;
+    }
+    
+    #goButton_1 {
+        color: #FFC123;
+        font-weight: bolder;
+        font-family: 'Chela One', Arial, Helvetica, sans-serif;
+        background-color: #FF23F6;
+        width: 50px;
+        height: 25px;
+        border-radius: 7px;
+        margin-top: 2px;
+}
+.Welcome {
+    color: #FFFFFF;
+    font-family: 'Chela One', Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+}
+
 
 /* gameboard */
 
@@ -362,6 +433,46 @@ button,
     }
 }
 
+@media (max-width: 500px) {
+   
+    #buttonsContainer{
+        width: 70px;
+    }
+    .grid {
+        margin-left: 2px;
+        width: 290px;
+        height: 240px;
+    }
+
+    .cell {
+        width: 20px;
+        height: 20px;
+    }
+    #restartButton, #quitButton, .score{
+        width: 50px;
+        font-size: 10px;
+}
+    .player1Score , .player2Score{
+        width: 50px;
+        height: 40px;
+        font-size: 10px;
+}
+    .whoWon2 h1 {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Chela One', Arial, Helvetica, sans-serif;
+        margin-left: 2px;
+    }
+
+    .whoWon2 p {
+        font-size: 10px;
+        margin-left: 2px;
+    }
+    .scoreContainer{
+        margin-left: -6px;
+    }
+}
+
 
 /* resultScreen */
 
@@ -521,4 +632,79 @@ input {
         margin-left: 10px;
         font-family: 'Chela One', Arial, Helvetica, sans-serif;
     }
+}
+
+@media (max-width: 500px) {
+
+    .connetFourImage2,
+    .connetFourImage2 {
+        width: 150px;
+        margin-left: 2px;
+    }
+
+    .playAgain{
+    width: 150px;
+    }
+    .playAgain h1 {
+        font-size: 10px;
+        font-weight: bold;
+        font-family: 'Chela One', Arial, Helvetica, sans-serif;
+        margin-left: 2px;
+    }
+
+    .inputStyles1 {
+        display: grid;
+        grid-template-columns: 40px 20px 40px 20px;
+        margin-left: 2px;
+    }
+    #player_1, #player_2 {
+        width: 20px;
+        border-radius: 2px;
+        font-size: 5px;
+    }
+    .pinkChip2 {
+        background-color: #FF23F6;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        border: solid;
+        border-color: #FFFFFF;
+    }
+    
+    .goldenChip2 {
+        background-color: #FFC123;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        border: solid;
+        border-color: #FFFFFF;
+    }
+    
+    #goButton_2 {
+        color: #FFC123;
+        font-weight: bolder;
+        font-family: 'Chela One', Arial, Helvetica, sans-serif;
+        background-color: #FF23F6;
+        width: 50px;
+        height: 25px;
+        border-radius: 7px;
+        margin-top: 2px;
+}
+#results-message , #congratulate {
+    color: #FFFFFF;
+    font-family: 'Chela One', Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: left;
+    margin-top: 10px;
+    font-size: 20px;
+    
+}
+.whoWon2 {
+    width: 162px;
+}
+
+.whoWon2 p {
+    font-size: 20px;
+}
+
 }

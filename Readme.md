@@ -9,7 +9,9 @@
 - [Contact](#contact)
 - [Figma Pictures](#figma-pictures)
 
-![[Mockup Video]](/Video/mockup.mp4).
+[Watch My Mockup](https://youtu.be/tIu0ooQGSDA)
+
+[Click here to play my Game](https://connect4hamza.netlify.app/ "Play My Game")
 
 # Project Title
 Connect Four game of the ages!

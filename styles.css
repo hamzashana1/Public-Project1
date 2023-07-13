@@ -1,0 +1,524 @@
+body {
+    background-color: #1E386E;
+}
+
+/* landing page  */
+
+#landingPage {
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+
+
+}
+
+#landingPage.hidden {
+    display: none;
+}
+
+.Welcome {
+    color: #FFFFFF;
+    font-family: 'Chela One', Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.instrctionsAndImage {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.instructions {
+    color: #FFFFFF;
+    font-family: 'Chela One', Arial, Helvetica, sans-serif;
+
+}
+
+.innerInstructions {
+    color: #FFFFFF;
+    font-family: 'Chela One', Arial, Helvetica, sans-serif;
+    width: 300px;
+    margin-top: 60px;
+
+}
+
+.instructions h1 {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Chela One', Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+}
+
+.instructions p {
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.inputStyles {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 3fr;
+    margin-left: 5px;
+}
+
+input {
+    width: 60px;
+    border-radius: 5px;
+}
+
+.pinkChip {
+    background-color: #FF23F6;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border: solid;
+    border-color: #FFFFFF;
+}
+
+.goldenChip {
+    background-color: #FFC123;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border: solid;
+    border-color: #FFFFFF;
+}
+
+#goButton_1 {
+    color: #FFC123;
+    font-weight: bolder;
+    font-family: 'Chela One', Arial, Helvetica, sans-serif;
+    background-color: #FF23F6;
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+#goButton_1:hover {
+    cursor: pointer;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    75% {
+        transform: rotate(-2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.connetFourImage,
+.connetFourImage1 {
+    width: 800px;
+    margin-top: 10px;
+    margin-left: 10px;
+    animation: wiggle 5000ms ease infinite;
+}
+
+
+#player1 {
+    color: #FFC123;
+}
+
+#player2 {
+    color: #FF23F6;
+}
+
+@media (max-width: 1148px) {
+
+    .connetFourImage,
+    .connetFourImage1 {
+        width: 600px;
+        margin-left: 5px;
+    }
+
+    .instructions h1 {
+        font-size: 35px;
+        font-weight: bold;
+        font-family: 'Chela One', Arial, Helvetica, sans-serif;
+        margin-left: 10px;
+    }
+
+    .instructions p {
+        font-size: 10px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 948px) {
+
+    .connetFourImage,
+    .connetFourImage1 {
+        width: 400px;
+        margin-left: 2px;
+    }
+
+    .instructions h1 {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Chela One', Arial, Helvetica, sans-serif;
+        margin-left: 10px;
+    }
+
+    .instructions p {
+        font-size: 10px;
+        margin-left: 10px;
+    }
+}
+
+
+/* gameboard */
+
+#gameBoard {
+    display: grid;
+    grid-template-rows: 7fr 1fr;
+}
+
+#gameBoard.hidden {
+    display: none;
+}
+
+.cellTaken {
+
+    background: red !important
+}
+
+.upperContainer {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+#buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+}
+
+button,
+.score {
+    background-color: #4973BE;
+    color: #FFFFFF;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Chela One', Arial, Helvetica, sans-serif;
+
+}
+
+#player1_score {
+    display: flex;
+}
+
+#player2_score {
+    display: flex;
+}
+
+.player1Score {
+    background-color: #4973BE;
+    color: #FF23F6;
+    width: 100px;
+    height: 70px;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Chela One', Arial, Helvetica, sans-serif;
+    
+}
+
+.player2Score {
+    background-color: #4973BE;
+    color: #FFC123;
+    width: 100px;
+    height: 70px;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Chela One', Arial, Helvetica, sans-serif;
+
+}
+
+.grid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 5px;
+    background-color: #4973BE;
+    border-radius: 10px;
+    justify-items: center;
+    width: 865px;
+    height: 665px;
+    align-items: center;
+}
+
+.cell {
+    width: 65px;
+    height: 65px;
+    background-color: #1E386E;
+    border-radius: 50%;
+}
+
+.pink {
+    background-color: #FF23F6;
+}
+
+.yellow {
+    background-color: #FFC123;
+}
+
+.scoreContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.currrentPlayer {
+    background-color: #4973BE;
+    color: #FFFFFF;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    font-family: 'Chela One', Arial, Helvetica, sans-serif;
+
+}
+
+#whosTurn {
+    background-color: #4973BE;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    font-family: 'Chela One', Arial, Helvetica, sans-serif;
+
+}
+
+@media (max-width: 1400px) {
+
+    .connetFourImage2,
+    .connetFourImage2 {
+        width: 800px;
+        margin-left: 5px;
+    }
+
+    .whoWon2 h1 {
+        font-size: 40px;
+        font-weight: bold;
+        font-family: 'Chela One', Arial, Helvetica, sans-serif;
+        margin-left: 10px;
+    }
+
+    .whoWon2 p {
+        font-size: 30px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 1148px) {
+    .grid {
+        margin-left: 2px;
+        width: 500px;
+        height: 400px;
+    }
+
+    .cell {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* resultScreen */
+
+#resultScreen {
+    display: grid;
+}
+
+#resultScreen.hidden {
+    display: none;
+}
+
+.whoWon1 {
+    color: #FFFFFF;
+    font-family: 'Chela One', Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.whoWon2 {
+    color: #FFFFFF;
+    font-family: 'Chela One', Arial, Helvetica, sans-serif;
+    width: 400px;
+    margin-top: 60px;
+
+}
+
+.whoWon2 h1 {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Chela One', Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+}
+
+.whoWon2 p {
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.inputStyles1 {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 3fr;
+    margin-left: 5px;
+}
+
+input {
+    width: 60px;
+    border-radius: 5px;
+}
+
+.pinkChip2 {
+    background-color: #FF23F6;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border: solid;
+    border-color: #FFFFFF;
+}
+
+.goldenChip2 {
+    background-color: #FFC123;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border: solid;
+    border-color: #FFFFFF;
+}
+
+#goButton_2 {
+    color: #FFC123;
+    font-family: 'Chela One', Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    background-color: #FF23F6;
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+#goButton_2:hover {
+    cursor: pointer;
+}
+
+.connetFourImage2,
+.connetFourImage2 {
+    display: flex;
+    justify-content: flex-end;
+    width: 1000px;
+    margin-top: 10px;
+    margin-left: 10px;
+    animation: wiggle 5000ms ease infinite;
+}
+
+#player_1 {
+    color: #FFC123;
+}
+
+#player_2 {
+    color: #FF23F6;
+}
+
+@media (max-width: 1400px) {
+
+    .connetFourImage2,
+    .connetFourImage2 {
+        width: 800px;
+        margin-left: 5px;
+    }
+
+    .whoWon2 h1 {
+        font-size: 40px;
+        font-weight: bold;
+        margin-left: 10px;
+        font-family: 'Chela One', Arial, Helvetica, sans-serif;
+    }
+
+    .whoWon2 p {
+        font-size: 30px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 1148px) {
+
+    .connetFourImage2,
+    .connetFourImage2 {
+        width: 600px;
+        margin-left: 5px;
+    }
+
+    .whoWon2 h1 {
+        font-size: 40px;
+        font-weight: bold;
+        margin-left: 10px;
+        font-family: 'Chela One', Arial, Helvetica, sans-serif;
+    }
+
+    .whoWon2 p {
+        font-size: 30px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 948px) {
+
+    .connetFourImage2,
+    .connetFourImage2 {
+        width: 400px;
+        margin-left: 2px;
+    }
+
+    .whoWon2 h1 {
+        font-size: 30px;
+        font-weight: bold;
+        margin-left: 10px;
+        font-family: 'Chela One', Arial, Helvetica, sans-serif;
+    }
+}
